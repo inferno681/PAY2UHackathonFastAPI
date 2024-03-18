@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "app"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.110.0"
+uvicorn = "^0.28.0"
+alembic = "^1.13.1"
+SQLAlchemy = "^2.0.28"
+pydantic-settings = "^2.2.1"
+pre-commit = "^3.6.2"
+asyncpg = "^0.29.0"
+greenlet = "^3.0.3"
+python-jose = "^3.3.0"
+passlib = "^1.7.4"
+pydantic = {extras = ["email"], version = "^2.6.4"}
+fastapi-users = {extras = ["sqlalchemy"], version = "^13.0.0"}
+fastapi-users-db-sqlalchemy = "^6.0.1"
+
+[tool.poetry.group.dev.dependencies]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+skip-string-normalization = true
+line-length = 79
+include_trailing_comma = true
+
+[tool.isort]
+profile = "black"
+line_length = 79
+include_trailing_comma = true
+
+[tool.flake8]
+ignore = "N811 W503"
