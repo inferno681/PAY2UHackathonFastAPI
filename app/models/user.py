@@ -16,5 +16,5 @@ class User(SQLAlchemyBaseUserTable[int], Base):
     last_name = Column(String(LENGTH_LIMITS_USER_FIELDS), nullable=False)
     middle_name = Column(String(LENGTH_LIMITS_USER_FIELDS))
     phone_number = Column(Integer, nullable=False)
-    card_number = relationship("card", back_populates="user")
-    subscriptions = relationship("user_subscription", back_populates="user")
+    cards = relationship("Card", back_populates="user")
+    subscriptions = relationship("UserSubscription", back_populates="user")

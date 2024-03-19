@@ -11,6 +11,7 @@ router = APIRouter()
 
 @router.get(
     '/subscriptions',
+    tags=['subscription'],
     responses={
         200: {'model': list[SubscriptionRead]},
         401: {'model': ErrorSchema},

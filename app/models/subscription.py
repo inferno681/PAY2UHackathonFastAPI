@@ -16,7 +16,7 @@ class Subscription(Base):
     monthly_price = Column(Float)
     semi_annual_price = Column(Float)
     annual_price = Column(Float)
-    users = relationship("user_subscription", back_populates="subscription")
+    users = relationship("UserSubscription", back_populates="subscription")
 
 
 class UserSubscription(Base):
@@ -29,5 +29,5 @@ class UserSubscription(Base):
     start_date = Column(Date, default=datetime.now)
     end_date = Column(Date)
 
-    user = relationship("user", back_populates="subscriptions")
-    subscription = relationship("subscription", back_populates="users")
+    user = relationship("User", back_populates="subscriptions")
+    subscription = relationship("Subscription", back_populates="users")
