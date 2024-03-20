@@ -1,8 +1,6 @@
 from fastapi import APIRouter
 
-from app.api.v1.endpoints import (
-    subscription_router
-)
+from app.api.v1.endpoints import subscription_router
 
 router = APIRouter()
 

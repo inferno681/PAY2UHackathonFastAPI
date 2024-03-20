@@ -41,9 +41,11 @@ auth_backend = AuthenticationBackend(
 
 class UserManager(IntegerIDMixin, BaseUserManager[User, int]):
     async def on_after_register(
-        self, user: User, request: Request | None = None
+        self,
+        user: User,
+        request: Request | None = None,
     ):
-        ...
+        pass
 
     async def validate_password(
         self,
