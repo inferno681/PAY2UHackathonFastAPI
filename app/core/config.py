@@ -6,7 +6,7 @@ class Settings(BaseSettings):
     description: str = "PAY2UHackathon"
     secret: str = "SECRET"
     database_url: str = (
-        "postgresql+asyncpg://postgres:postgres@db:5432/postgres"
+        "postgresql+asyncpg://postgres:postgres@localhost:5432/postgres"
     )
 
     class Config:

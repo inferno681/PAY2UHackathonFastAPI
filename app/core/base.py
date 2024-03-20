@@ -1,8 +1,3 @@
 # flake8: noqa
 from app.core.db import Base
-from app.models import (
-    Card,
-    subscription,
-    UserSubscription,
-    User,
-)
+from app.models import Card, Subscription, User, UserSubscription
